@@ -121,33 +121,6 @@ def dept_save_fn():
 		
 		if((len(dept_id) == 0) and (len(dept_name) == 0) and (len(dept_location) == 0)):
 			return showerror("Error","Please Enter All Data Fields!!")
-#		elif (((len(rno) == 0) and (len(name) == 0)) or ((len(name) == 0) and (len(marks) == 0)) or  ((len(rno) == 0) and (len(marks) == 0))) :
-#			return showerror("Error","Please check Roll No,Name and Marks\n 2 of them left Empty")
-#		elif(rno.isalpha() and marks.isalpha()):
-#			return showerror("Error","Roll Number and Marks cannot be a string!!")
-		#ROLL NO VALIDATION
-#		elif(len(rno) == 0):
-#			return showerror("Error","Please Enter Roll Number. \nRoll Number cannot be empty!!")
-#		elif(rno.isalpha()):
-#			return showerror("Error","Roll Number cannot be a string!!")
-#		elif(int(rno) <= 0):
-#			return showerror("Error","Roll Number cannot be Negative or Zero!!")
-		#NAME VALIDATION
-#		elif(len(name) == 0):
-#			return showerror("Error","Please Enter Name. \nName cannot Empty!!")
-#		elif (not name.isalpha()):
-#			return showerror("Error","Name cannot contain numbers!!")
-#		elif(len(name) < 2):
-#			return showerror("Error","Please check Name. \nLength of Name cannot be less than 2!!")
-		#MARKS VALIDATION
-#		elif(len(marks) == 0):
-#			return showerror("Error","Please Enter Marks. \nMarks cannot be Empty!!")
-#		elif(marks.isalpha()):
-#			return showerror("Error","Marks cannot be a string!!")
-#		elif(int(marks) < 0):
-#			return showerror("Error","Marks cannot be less than Zero!!")
-#		elif(int(marks) > 100):
-#			return showerror("Error","Marks cannot be greater than 100!!")
 		else:
 			dept_id = int(dept_id)
 			dept_name = dept_name
@@ -156,8 +129,6 @@ def dept_save_fn():
 			cursor.execute(sql % (dept_id, dept_name, dept_location))
 			con.commit()
 			showinfo("Success", "Record added")
-#	except IntegrityError:
-#		showerror("Failure","Department already exists!!")
 	except Exception as e:
 		print (e)
 		showerror("Failure", e)
@@ -224,16 +195,6 @@ def f6():
 	#info= "Emp_ID	Name	Email	Salary	Projects	Dept_ID\n"
 	con = None
 	try:
-		#con = connect('ems.db')
-		#cursor = con.cursor()
-		#sql = "select * from employee"
-		#cursor.execute(sql)
-		#data = cursor.fetchall()
-		#for d in data:
-		#	info = info + " " + str(d[0]) + " " + str(d[1]) + " " + str(d[2]) + " " + str(d[3]) + "	" + str(d[4]) + " " + str(d[5]) + "\n"
-		#print(info)
-		#emp_view_window_st_data.insert(INSERT, info)
-		
 		for item in emp_view_window_tree.get_children():
 			emp_view_window_tree.delete(item)
 		con = connect("ems.db")
@@ -271,33 +232,6 @@ def f8():
 		
 		if((len(emp_id) == 0) and (len(emp_name) == 0) and (len(emp_salary) == 0) and (len(dept_id) == 0) and (len(no_projects) == 0) and (len(emp_email) == 0)):
 			return showerror("Error","Please Enter All Data Fields!!")
-#		elif (((len(rno) == 0) and (len(name) == 0)) or ((len(name) == 0) and (len(marks) == 0)) or  ((len(rno) == 0) and (len(marks) == 0))) :
-#			return showerror("Error","Please check Roll No,Name and Marks\n 2 of them left Empty")
-#		elif(rno.isalpha() and marks.isalpha()):
-#			return showerror("Error","Roll Number and Marks cannot be a string!!")
-		#ROLL NO VALIDATION
-#		elif(len(rno) == 0):
-#			return showerror("Error","Please Enter Roll Number. \nRoll Number cannot be empty!!")
-#		elif(rno.isalpha()):
-#			return showerror("Error","Roll Number cannot be a string!!")
-#		elif(int(rno) <= 0):
-#			return showerror("Error","Roll Number cannot be Negative or Zero!!")
-		#NAME VALIDATION
-#		elif(len(name) == 0):
-#			return showerror("Error","Please Enter Name. \nName cannot Empty!!")
-#		elif (not name.isalpha()):
-#			return showerror("Error","Name cannot contain numbers!!")
-#		elif(len(name) < 2):
-#			return showerror("Error","Please check Name. \nLength of Name cannot be less than 2!!")
-		#MARKS VALIDATION
-#		elif(len(marks) == 0):
-#			return showerror("Error","Please Enter Marks. \nMarks cannot be Empty!!")
-#		elif(marks.isalpha()):
-#			return showerror("Error","Marks cannot be a string!!")
-#		elif(int(marks) < 0):
-#			return showerror("Error","Marks cannot be less than Zero!!")
-#		elif(int(marks) > 100):
-#			return showerror("Error","Marks cannot be greater than 100!!")
 		else:
 			emp_id = int(emp_id)
 			emp_name = emp_name
@@ -330,9 +264,6 @@ def f8():
 			s.send_message(message)
 
 			s.quit()
-
-#	except IntegrityError:
-#		showerror("Failure","Employee already exists!!")
 	except Exception as e:
 		print (e)
 		showerror("Failure", e)
@@ -363,33 +294,6 @@ def f9():
 		
 		if((len(emp_id) == 0) and (len(emp_name) == 0) and (len(emp_salary) == 0) and (len(dept_id) == 0) and (len(no_projects) == 0) and (len(emp_email) == 0)):
 			return showerror("Error","Please Enter All Data Fields!!")
-#		elif (((len(rno) == 0) and (len(name) == 0)) or ((len(name) == 0) and (len(marks) == 0)) or  ((len(rno) == 0) and (len(marks) == 0))) :
-#			return showerror("Error","Please check Roll No,Name and Marks\n 2 of them left Empty")
-#		elif(rno.isalpha() and marks.isalpha()):
-#			return showerror("Error","Roll Number and Marks cannot be a string!!")
-		#ROLL NO VALIDATION
-#		elif(len(rno) == 0):
-#			return showerror("Error","Please Enter Roll Number. \nRoll Number cannot be empty!!")
-#		elif(rno.isalpha()):
-#			return showerror("Error","Roll Number cannot be a string!!")
-#		elif(int(rno) <= 0):
-#			return showerror("Error","Roll Number cannot be Negative or Zero!!")
-		#NAME VALIDATION
-#		elif(len(name) == 0):
-#			return showerror("Error","Please Enter Name. \nName cannot Empty!!")
-#		elif (not name.isalpha()):
-#			return showerror("Error","Name cannot contain numbers!!")
-#		elif(len(name) < 2):
-#			return showerror("Error","Please check Name. \nLength of Name cannot be less than 2!!")
-		#MARKS VALIDATION
-#		elif(len(marks) == 0):
-#			return showerror("Error","Please Enter Marks. \nMarks cannot be Empty!!")
-#		elif(marks.isalpha()):
-#			return showerror("Error","Marks cannot be a string!!")
-#		elif(int(marks) < 0):
-#			return showerror("Error","Marks cannot be less than Zero!!")
-#		elif(int(marks) > 100):
-#			return showerror("Error","Marks cannot be greater than 100!!")
 		else:
 			emp_id = int(emp_id)
 			emp_name = emp_name
@@ -521,10 +425,6 @@ def employee_pie_fn():
 		if con is not None:
 			con.close()
 
-#EMPLOYEE_PIE-BACK BUTTON
-#def employee_pie_back_fn():
-#	analytics_window.deiconify()
-#	employee_pie_chart_window.withdraw()
 
 #SALARY_CHART BUTTON	
 def salary_chart_fn():
@@ -561,11 +461,6 @@ def salary_chart_fn():
 		
 		plt.savefig("salary_graph.png")
 		plt.show()	
-		#img2 = ImageTk.PhotoImage(Image.open('salary_graph.png'))
-		
-		#lab2.configure(image = img2)
-		#lab2.image = img2
-		#con.commit()
 	except DatabaseError as e :
 		messagebox.showerror("Galat Kiya",e)
 		con.rollback()
@@ -573,15 +468,8 @@ def salary_chart_fn():
 		if con is not None:
 			con.close()
 
-#SALARY_CHART-BACK BUTTON
-#def salary_chart_back_fn():
-#	analytics_window.deiconify()
-#	salary_chart_window.withdraw()
-
 #PERFORMANCE_CHART BUTTON	
 def performance_chart_fn():
-	#performance_chart_window.deiconify()
-	#analytics_window.withdraw()
 	con = None
 	try:
 		list3 = []
@@ -613,22 +501,12 @@ def performance_chart_fn():
 		
 		plt.savefig("projects_graph.png")
 		plt.show()	
-		#img3 = ImageTk.PhotoImage(Image.open('projects_graph.png'))
-		
-		#lab3.configure(image = img3)
-		#lab3.image = img3
-		#con.commit()
 	except DatabaseError as e :
 		messagebox.showerror("Galat Kiya",e)
 		con.rollback()
 	finally:
 		if con is not None:
 			con.close()
-
-#PERFORMANCE-BACK BUTTON
-#def performance_chart_back_fn():
-#	analytics_window.deiconify()
-#	performance_chart_window.withdraw()
 
 #Search BUTTON
 def emp_search_fn():
@@ -654,12 +532,6 @@ def search_name_fn():
 
 		sql = "select * from employee where emp_name = '%s'"
 		cursor.execute(sql % (emp_name))
-		#data = cursor.fetchall()
-		#for d in data:
-		#	info = info + " " + str(d[0]) + " " + str(d[1]) + " " + str(d[2]) + " " + str(d[3]) + "	" + str(d[4]) + " " + str(d[5]) + "\n"
-		#print(info)
-		#print(data)
-		#print(cursor.rowcount)
 		
 		rows = cursor.fetchall()    
 		
@@ -1138,50 +1010,6 @@ hover_btn(analytics_window_btn_performance_chart)
 hover_btn(analytics_window_btn_back)
 
 analytics_window.withdraw()
-
-
-#employee_pie_chart_window = Toplevel(analytics_window)
-#employee_pie_chart_window.title("Employee Pie Chart")
-#employee_pie_chart_window.geometry("700x650+400+100")
-#employee_pie_chart_window.configure(background = "#011f3f")
-
-#img1 = ImageTk.PhotoImage(Image.open('projects_graph.png'))
-#lab1 = Label(employee_pie_chart_window, image = img1)
-#lab1.pack(pady=10)
-		
-#employee_pie_chart_window_btn_back = Button(employee_pie_chart_window, bd = 0, text = "Back", font = ('Century Gothic', 20, 'bold'),bg = "#429ffd", fg = "#000000", command = employee_pie_back_fn)
-
-#employee_pie_chart_window_btn_back.pack(pady = 10)
-#employee_pie_chart_window.withdraw()
-
-
-#salary_chart_window = Toplevel(analytics_window)
-#salary_chart_window.title("Salary Graph")
-#salary_chart_window.geometry("700x650+400+100")
-#salary_chart_window.configure(background = "#011f3f")
-
-#img2 = ImageTk.PhotoImage(Image.open('salary_graph.png'))
-#lab2 = Label(salary_chart_window, image = img2)
-#lab2.pack(pady=10)
-		
-#salary_chart_window_btn_back = Button(salary_chart_window, bd = 0, text = "Back", font = ('Century Gothic', 20, 'bold'),bg = "#429ffd", fg = "#000000", command = salary_chart_back_fn)
-
-#salary_chart_window_btn_back.pack(pady = 10)
-#salary_chart_window.withdraw()
-
-#performance_chart_window = Toplevel(analytics_window)
-#performance_chart_window.title("Performance Graph")
-#performance_chart_window.geometry("700x650+400+100")
-#performance_chart_window.configure(background = "#011f3f")
-
-#img3 = ImageTk.PhotoImage(Image.open('projects_graph.png'))
-#lab3 = Label(performance_chart_window, image = img3)
-#lab3.pack(pady=10)
-		
-#performance_chart_window_btn_back = Button(performance_chart_window, bd = 0, text = "Back", font = ('Century Gothic', 20, 'bold'),bg = "#429ffd", fg = "#000000", command = performance_chart_back_fn)
-
-#performance_chart_window_btn_back.pack(pady = 10)
-#performance_chart_window.withdraw()
 
 emp_search_window = Toplevel(emp_main_window)
 emp_search_window.title("Search Employee")
